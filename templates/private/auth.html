@@ -1,0 +1,31 @@
+{# included by base.html #}
+
+<details>
+    <summary>Login</summary>
+    <form action="{{ url_for('auth.login') }}" method="POST">
+        <div>
+            <label><input type="text" name="username" placeholder="Username" /></label>
+        </div>
+        <div>
+            <label><input type="password" name="password" placeholder="Password" /></label>
+        </div>
+        <button>Log in</button>
+    </form>
+</details>
+
+<details>
+    <summary>Register</summary>
+    <form action="{{ url_for('auth.register') }}" method="POST">
+        <div>
+            <label><input type="text" name="username" placeholder="Username" /></label>
+        </div>
+        <div>
+            <label><input type="password" name="password" placeholder="Password" /></label>
+        </div>
+        <div>
+            <label><input type="password" name="password2" placeholder="Password again" /></label>
+        </div>
+        <button>Register</button>
+    </form>
+</details>
+
