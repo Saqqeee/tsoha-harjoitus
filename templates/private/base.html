@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <div id="page">
+        <div id="sidebar">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                    <p class="flash">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            {% if not session["username"] %}
+                {% include "private/auth.html" %} {# auth forms #}
+            {% else %}
+                <h2>{{ session["username"] }}</h2>
+                <form action="{{ url_for('auth.logout') }}" method="POST">
+                <button>Log out</button>
+                </form>
+            {% endif %}
+        </div>
+
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>
