@@ -1,0 +1,31 @@
+{% extends "private/base.html" %}
+
+{% block content %}
+
+    <h1>{{ title }}</h1>
+
+    {% for post in posts %}
+
+        <div id="{{ post['id'] }}" class="post">
+            <p>{{ post['text'] }}</p>
+            <p>{{ post['user'] }} at {{ post['date'] }}</p>
+        </div>
+        <hr/>
+
+    {% endfor %}
+
+    {% if session['uid'] %}
+
+        <h2>Reply</h2>
+
+        <form action="{{ url_for('threads.comment') }}" method="POST">
+        <input type="hidden" name="thread_id" value="{{ thread_id }}" />
+        <label>
+            <textarea name="message" placeholder="Message" rows="15" cols="50"></textarea>
+        </label>
+        <button>Post</button>
+    </form>
+
+    {% endif %}
+
+{% endblock %}
