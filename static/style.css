@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+    color: whitesmoke;
+}
+
+details {
+    display: block;
+    margin-top: 0;
+    max-width: max-content;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid lightslategrey;
+    padding: 5px;
+    margin-top: 0;
+}
+
+input {
+    max-width: 80%;
+}
+
+#page {
+    padding-top: 50px;
+    width: 60%;
+    margin: auto;
+    display: block;
+}
+
+#sidebar {
+    float: left;
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    padding: 10px;
+}
+
+#content {
+    display: inline-block;
+    width: 70%;
+}
+
+a {
+    color: whitesmoke;
+}
+
+.decoration {
+    display: inline;
+}
+
+details summary {
+    list-style: none;
+}
+details summary::marker {
+    display: none;
+}
+
+details summary.add {
+    list-style-type: "+";
+    list-style-position: inside;
+}
