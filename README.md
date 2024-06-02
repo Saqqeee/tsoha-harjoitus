@@ -1,4 +1,6 @@
-# Aihe
+# Foorumi
+
+## Aihe
 Valitsin aiheeksi keskustelusovelluksen kurssimateriaalin esimerkeistä. Yhteenveto keskeisistä ominaisuuksista:
 
 ### Käyttäjät
@@ -12,3 +14,9 @@ Käyttäjät voivat lähettää viestiketjuja niille tarkoitetuille aihealueille
 Viestiketjuihin voi vastata ja muita viestiketjun viestejä voi lainata vastauksessa.
 Viestin lähettäjä voi muokata tai poistaa viestinsä. Myös ylläpitäjillä on oikeus poistaa viestejä.
 Viestejä voi myös hakea avainsanoilla.
+
+## Vaihe
+Sovellus on toistaiseksi vielä melko alkuvaiheillaan. Tällä hetkellä on mahdollista luoda käyttäjätunnus
+ja kirjautua sisään/ulos sekä luoda aihealueita, aiheita ja kommentteja. Ylläpito-oikeuksia ei ole vielä
+erikseen, vaan käyttäjätunnuksen omistaminen riittää kaikkiin toimintoihin. Tästä pohjasta on helppo lähteä
+rakentamaan toimivaa sovellusta.
