@@ -29,7 +29,7 @@ asenna sinne [tarvittavat moduulit](requirements.txt). Windowsin komentorivillä
 
 ```commandline
 python3 -m venv venv
-venv/Scripts/activate.bat
+venv\Scripts\activate.bat
 pip install -r requirements.txt
 ```
 
